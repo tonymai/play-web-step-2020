@@ -1,23 +1,15 @@
 import React from 'react';
 import './App.css';
+import bootstrap from "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
+import "./clusters/style.css"
+import TopCharts from "./clusters/TopCharts/TopCharts.js"
+import SingleAppContainer from "./clusters/TopCharts/SingleAppContainer.js"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TopCharts />
   );
 }
 

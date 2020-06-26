@@ -1,0 +1,59 @@
+.col {
+  width: 25%;
+  display: inline-flex;
+}
+
+.vertical-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.vertical-row div {
+  padding-bottom: 5px;
+}
+
+.chart_categories {
+  font-size: 12px;
+  text-align: left;
+  color: #575757;
+}
+
+.sectionHeader {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.sectionHeader h8 {
+  color: #575757;
+}
+
+#app_icon_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  display: block;
+  float: left;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.app_details {
+  text-align: left;
+  padding-left: 70px;
+}
+
+.app_title {
+  padding: 0;
+  margin: 0;
+}
+
+.grey_text {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  color: #7f7f7f;
+}
+
+#rating_star_icon {
+  width: 12px;
+  padding-left: 2px;
+}
