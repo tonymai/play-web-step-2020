@@ -1,4 +1,4 @@
-.col {
+.col-25 {
   width: 25%;
   display: inline-flex;
 }
@@ -12,22 +12,23 @@
   padding-bottom: 5px;
 }
 
-.chart_categories {
+.chart-categories {
+  text-transform: uppercase;
   font-size: 12px;
   text-align: left;
   color: #575757;
 }
 
-.sectionHeader {
+.section-header {
   text-align: left;
   margin-bottom: 25px;
 }
 
-.sectionHeader h8 {
+.section-header h8 {
   color: #575757;
 }
 
-#app_icon_img {
+.img-fluid {
   width: 50px;
   height: 50px;
   border-radius: 20%;
@@ -36,24 +37,24 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
-.app_details {
+.app-details {
   text-align: left;
   padding-left: 70px;
 }
 
-.app_title {
+.app-title {
   padding: 0;
   margin: 0;
 }
 
-.grey_text {
+.grey-text {
   margin: 0;
   padding: 0;
   font-size: 12px;
   color: #7f7f7f;
 }
 
-#rating_star_icon {
+.rating-star-icon {
   width: 12px;
   padding-left: 2px;
 }
