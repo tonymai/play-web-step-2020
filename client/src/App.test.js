@@ -1,5 +1,5 @@
 import React from 'react';
-// import { FetchMock } from '@react-mock/fetch';
+import { FetchMock } from '@react-mock/fetch';
 import { findRenderedComponentWithType } from 'react-dom/test-utils';
 import { render, wait }from '@testing-library/react';
 import App from './App';
@@ -7,15 +7,15 @@ import TopCharts from './Clusters/TopCharts/TopCharts.js';
 import SingleAppContainer from './Clusters/TopCharts/SingleAppContainer.js';
 
 const renderComponent = () =>
-    render(
-        <FetchMock
-            options={
-                { matcher: '/api/v1/test-servlet', method: 'GET', response: "Hello world" }
-            }
-        >
-            <App />
-        </FetchMock>
-    );
+  render(
+    <FetchMock
+      options={{
+  matcher: '/api/v1/test-servlet', method: 'GET', response: 'Hello world',
+      }}
+    >
+      <App />
+    </FetchMock>
+  )
 
 const renderSingleAppContainer = () =>
     render(
