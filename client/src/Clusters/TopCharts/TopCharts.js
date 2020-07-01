@@ -35,7 +35,6 @@ class TopCharts extends Component {
                         </div>
                     </div>
         })}
-
       </div>
     );
   }

@@ -1,6 +1,5 @@
 import React from 'react';
 import { FetchMock } from '@react-mock/fetch';
-import { findRenderedComponentWithType } from 'react-dom/test-utils';
 import { render, wait }from '@testing-library/react';
 import App from './App';
 

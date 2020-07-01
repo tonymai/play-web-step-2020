@@ -1,3 +1,5 @@
+import React from 'react';
+import { render, wait }from '@testing-library/react';
 import TopCharts from './TopCharts.js';
 
 test('correct column titles', () => {
