@@ -1,18 +1,22 @@
-.col-25 {
-  width: 25%;
+.col {
   display: inline-flex;
 }
 
-.vertical-row {
-  display: flex;
-  flex-direction: column;
+.section {
+    background-color: #f8f9fa;
+    margin: auto;
+    display: block;
+    width: 75%;
 }
 
-.vertical-row div {
+.vertical-row {
+  flex-direction: column;
+  display: flex;
+  margin: 0 3em 0 3em;
   padding-bottom: 5px;
 }
 
-.chart-categories {
+.vertical-row h3 {
   text-transform: uppercase;
   font-size: 12px;
   text-align: left;
@@ -21,11 +25,16 @@
 
 .section-header {
   text-align: left;
-  margin-bottom: 25px;
+  padding-left: 10px;
 }
 
-.section-header h8 {
+.section-header h1 {
+    font-size: 30px;
+}
+
+.section-header h2 {
   color: #575757;
+  font-size: 20px;
 }
 
 .img-fluid {
@@ -43,6 +52,7 @@
 }
 
 .app-title {
+  font-size: 0.7em;
   padding: 0;
   margin: 0;
 }

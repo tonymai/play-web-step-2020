@@ -1,21 +1,24 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 import starIcon from './Images/starIcon.svg';
 
 class SingleAppContainer extends Component {
   render() {
+    const {listNum, url, title, category, rating} = this.props;
+
     return (
       <>
-        <p class="num">{this.props.listNum}</p>
+        <p class="num">{listNum}</p>
         <img
           class="img-fluid"
           alt="icon 1"
-          src={this.props.url}
+          src={url}
         />
         <div class="app-details">
-          <h6 class="app-title">{this.props.title}</h6>
-          <p class="grey-text">{this.props.category} - Category </p>
+          <h3 class="app-title">{title}</h3>
+          <p class="grey-text">{category} - Category</p>
           <p class="grey-text">
-            {this.props.rating}
+            {rating}
             <img
               class="rating-star-icon"
               alt="rating star"
@@ -28,3 +31,11 @@ class SingleAppContainer extends Component {
   }
 }
 export default SingleAppContainer;
+
+SingleAppContainer.propTypes = { 
+    listNum: PropTypes.number,
+    url: PropTypes.string,
+    title: PropTypes.string,
+    category: PropTypes.string,
+    rating: PropTypes.number
+};
