@@ -12,7 +12,6 @@ const renderSingleAppContainer = () =>
             rating={4.5} />
     );
 
-
 test('passes correct title', async () => {
     const { getByText } = renderSingleAppContainer();
     await wait(() => expect(getByText("Test Title")).toBeInTheDocument());
