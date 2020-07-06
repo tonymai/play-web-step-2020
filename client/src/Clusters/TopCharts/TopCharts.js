@@ -7,7 +7,7 @@ import '../styles.css';
 class TopCharts extends Component {
   render() {
     const makeColumn = item => (
-        <div key={item.appID}>
+        <div key={item.appId}>
             <SingleAppContainer
             listNum={item.listNum}
             url={item.url}

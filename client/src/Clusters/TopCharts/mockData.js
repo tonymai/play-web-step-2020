@@ -8,7 +8,7 @@ export const topFree = {
       title: "Top Free",
       cards: [
       {
-        appID: "01",
+        appId: "01",
         listNum: 1,
         url: facebookLogo,
         title: "Messenger",
@@ -16,7 +16,7 @@ export const topFree = {
         rating: 4.6
       },
       {
-        appID: "02",
+        appId: "02",
         listNum: 2,
         url: emptyAppImage,
         title: "App Name",
@@ -24,7 +24,7 @@ export const topFree = {
         rating: 4.6
       },
       {
-        appID: "03",
+        appId: "03",
         listNum: 3,
         url: emptyAppImage,
         title: "App Name",
@@ -32,7 +32,7 @@ export const topFree = {
         rating: 4.6
       },
       {
-        appID: "04",
+        appId: "04",
         listNum: 4,
         url: emptyAppImage,
         title: "App Name",
@@ -46,7 +46,7 @@ export const topGrossing = {
       title: "Top Grossing",
       cards: [
       {
-        appID: "11",
+        appId: "11",
         listNum: 1,
         url: pandoraLogo,
         title: "Pandora",
@@ -54,7 +54,7 @@ export const topGrossing = {
         rating: 4.6
       },
       {
-        appID: "12",
+        appId: "12",
         listNum: 2,
         url: emptyAppImage,
         title: "App Name",
@@ -62,7 +62,7 @@ export const topGrossing = {
         rating: 4.6
       },
       {
-        appID: "13",
+        appId: "13",
         listNum: 3,
         url: emptyAppImage,
         title: "App Name",
@@ -70,7 +70,7 @@ export const topGrossing = {
         rating: 4.6
       },
       {
-        appID: "14",
+        appId: "14",
         listNum: 4,
         url: emptyAppImage,
         title: "App Name",
@@ -84,7 +84,7 @@ export const trending = {
       title: "Trending",
       cards: [
       {
-        appID: "21",
+        appId: "21",
         listNum: 1,
         url: wearOSLogo,
         title: "Wear OS by Google",
@@ -92,7 +92,7 @@ export const trending = {
         rating: 4.6
       },
       {
-        appID: "22",
+        appId: "22",
         listNum: 2,
         url: emptyAppImage,
         title: "App Name",
@@ -100,7 +100,7 @@ export const trending = {
         rating: 4.6
       },
       {
-        appID: "23",
+        appId: "23",
         listNum: 3,
         url: emptyAppImage,
         title: "App Name",
@@ -108,7 +108,7 @@ export const trending = {
         rating: 4.6
       },
       {
-        appID: "24",
+        appId: "24",
         listNum: 4,
         url: emptyAppImage,
         title: "App Name",
@@ -122,7 +122,7 @@ export const topPaid = {
       title: "Top Paid",
       cards: [
       {
-        appID: "31",
+        appId: "31",
         listNum: 1,
         url: myWeatherLogo,
         title: "MyWeather Radar",
@@ -130,7 +130,7 @@ export const topPaid = {
         rating: 4.6
       },
       {
-        appID: "32",
+        appId: "32",
         listNum: 2,
         url: emptyAppImage,
         title: "App Name",
@@ -138,7 +138,7 @@ export const topPaid = {
         rating: 4.6
       },
       {
-        appID: "33",
+        appId: "33",
         listNum: 3,
         url: emptyAppImage,
         title: "App Name",
@@ -146,7 +146,7 @@ export const topPaid = {
         rating: 4.6
       },
       {
-        appID: "34",
+        appId: "34",
         listNum: 4,
         url: emptyAppImage,
         title: "App Name",
