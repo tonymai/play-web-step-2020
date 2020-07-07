@@ -24,7 +24,7 @@ class TopCharts extends Component {
       <div className="section">
         <div class="section-header">
           <h1>Top Charts</h1>
-          <h2>For Wear OS</h2>
+          <h3>For Wear OS</h3>
         </div>
  
         {charts.map((value, index) => {

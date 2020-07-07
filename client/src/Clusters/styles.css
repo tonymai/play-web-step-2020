@@ -3,17 +3,24 @@
 }
 
 .section {
-    background-color: #f8f9fa;
     display: block;
     margin: auto;
+    margin-top: 60px;
     width: 75%;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5px;
+  margin: 0 1em 0 1em;
 }
 
 .vertical-row {
   display: flex;
   flex-direction: column;
-  margin: 0 3em 0 3em;
   padding-bottom: 5px;
+  margin: 0 3em 0 3em;
 }
 
 .vertical-row h3 {
@@ -33,6 +40,10 @@
 }
 
 .section-header h2 {
+    color: black;
+}
+
+.section-header h3 {
   color: #575757;
   font-size: 20px;
 }
