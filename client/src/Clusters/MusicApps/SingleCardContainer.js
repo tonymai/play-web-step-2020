@@ -12,11 +12,11 @@ class SingleCardContainer extends Component {
                 <img class="img-fluid" alt="appIcon" src={iconUrl} />
                 <div class="app-details">
                      <h3 class="app-title">{title}</h3>
-                     <p class="grey-text"> 
+                     <div class="grey-text"> 
                       {rating}
                       <img class="rating-star-icon" alt="rating star" src={starIcon} />  
                       {rated}
-                     </p>
+                     </div>
                      <p class="grey-text">{appDescription}</p>
                 </div>
             </div>

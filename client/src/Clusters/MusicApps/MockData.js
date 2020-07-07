@@ -8,7 +8,7 @@ export const musicApps = {
     title: "Rock out while you work out",
     cards: [
         {
-            appId: "01",
+            id: "01",
             wearOsImage: smartWatch,
             title: "Spotify: Listen to new music...",
             iconUrl: spotifyIcon,
@@ -17,7 +17,7 @@ export const musicApps = {
             appDescription: "Listen to the songs and podcasts you love and discover new music"
         },
         {            
-            appId: "02",
+            id: "02",
             wearOsImage: smartWatch,
             title: "iHeartRadio: Radio, Podcast...",
             iconUrl: iHeartRadioIcon,
@@ -26,7 +26,7 @@ export const musicApps = {
             appDescription: "Your music, Your stations, and #1 For Podcasts. All Free."
         },
         {            
-            appId: "03",
+            id: "03",
             wearOsImage: smartWatch,
             title: "NavMusic: Wear OS Offline...",
             iconUrl: navMusicIcon,
@@ -35,7 +35,7 @@ export const musicApps = {
             appDescription: "Play offline on your wear OS device with a clear, simple interface"
         },
         {           
-            appId: "04",
+            id: "04",
             wearOsImage: smartWatch,
             title: "Pandora: Streaming Music...",
             iconUrl: pandoraIcon,
