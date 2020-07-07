@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import './App.css';
 import TopCharts from './Clusters/TopCharts/TopCharts.js';
+import MusicApps from './Clusters/MusicApps/MusicApps.js';
 import RecommendedCategories from './components/cluster/RecommendedCategories/RecommendedCategories.js';
-
 
 class App extends Component {
   constructor(props) {
@@ -23,6 +23,7 @@ class App extends Component {
           <h2>Welcome to React</h2>
           {this.state.text}
         </div>
+        <MusicApps />
         <TopCharts />
         <RecommendedCategories />
       </div>
