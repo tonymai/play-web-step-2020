@@ -7,12 +7,12 @@ public class TopChartsCluster {
     ArrayList<Chart> charts = new ArrayList<Chart>();
 
     TopChartsCluster() {
-        App mockApp1 = new App(1, "mockApp1", "mockIcon1.png", "Fake Apps", 5, 0);
-        App mockApp2 = new App(2, "mockApp2", "mockIcon2.png", "Fake Apps", 5, 0);
-        App mockApp3 = new App(3, "mockApp3", "mockIcon3.png", "Fake Apps", 5, 0);
-        App mockApp4 = new App(4, "mockApp4", "mockIcon4.png", "Fake Apps", 5, 0);
-        App mockApp5 = new App(5, "mockApp5", "mockIcon5.png", "Fake Apps", 5, 0);
-        App mockApp6 = new App(6, "mockApp6", "mockIcon6.png", "Fake Apps", 5, 0);
+        App mockApp1 = new App(1, "mockApp1", "mockIcon1.png", "Fake Apps", 5, null, 0, null);
+        App mockApp2 = new App(2, "mockApp2", "mockIcon2.png", "Fake Apps", 5, null, 0, null);
+        App mockApp3 = new App(3, "mockApp3", "mockIcon3.png", "Fake Apps", 5, null, 0, null);
+        App mockApp4 = new App(4, "mockApp4", "mockIcon4.png", "Fake Apps", 5, null, 0, null);
+        App mockApp5 = new App(5, "mockApp5", "mockIcon5.png", "Fake Apps", 5, null, 0, null);
+        App mockApp6 = new App(6, "mockApp6", "mockIcon6.png", "Fake Apps", 5, null, 0, null);
 
         ArrayList<App> topFree = new ArrayList<App>();
         ArrayList<App> topGrossing = new ArrayList<App>();

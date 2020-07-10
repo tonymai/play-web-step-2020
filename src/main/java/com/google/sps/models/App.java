@@ -6,12 +6,14 @@ public class App {
     String icon, name, category;
     double rating, price;
 
-    App(int id, String name, String icon, String category, double rating, double price) {
+    App(int id, String name, String icon, String category, double rating, String rated, double price, String appDescription) {
         this.id = id;
         this.icon = icon;
         this.name = name;
         this.category = category;
         this.rating = rating;
+        this.rated = rated;
         this.price = price;
+        this.appDescription = appDescription;
     }
 }
