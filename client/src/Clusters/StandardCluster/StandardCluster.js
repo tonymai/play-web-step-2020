@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import '../styles.css';
-import './MusicAppsStyle.css';
+import './StandardClusterStyle.css';
 import SingleCardContainer from './SingleCardContainer.js';
-import {musicApps} from './MockData.js';
+import {cluster} from './MockData.js';
 
-class MusicApps extends Component {
+class StandardCluster extends Component {
     render() {
         const makeRow = item => (
             <div key={item.id}>
@@ -22,14 +22,14 @@ class MusicApps extends Component {
         return (
             <div className="section">
                 <div className="section-header">
-                    <h2>{musicApps.title}</h2>
+                    <h2>{cluster.title}</h2>
                 </div>
                 <div className="col">
-                    {musicApps.cards.map(makeRow)}
+                    {cluster.cards.map(makeRow)}
                 </div>                
             </div>
         );
     }
 }
 
-export default MusicApps;
+export default StandardCluster;

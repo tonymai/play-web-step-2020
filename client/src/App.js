@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import TopCharts from './Clusters/TopCharts/TopCharts.js';
-import MusicApps from './Clusters/MusicApps/MusicApps.js';
+import StandardCluster from './Clusters/StandardCluster/StandardCluster.js';
 import RecommendedCategories from './Clusters/RecommendedCategories/RecommendedCategories.js';
 
 class App extends Component {
@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <MusicApps />
+        <StandardCluster />
         <TopCharts />
         <RecommendedCategories />
       </div>
