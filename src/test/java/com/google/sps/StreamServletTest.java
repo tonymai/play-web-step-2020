@@ -65,13 +65,12 @@ public final class StreamServletTest {
     servlet.doGet(mockRequest, mockResponse);
     verify(mockResponse, atLeast(1)).setContentType("application/json");
 
-    // Convert JSON File to Java Object
+    Convert JSON File to Java Object
     Gson gson = new Gson();
     Stream testStream = gson.fromJson(stringWriter.toString(), Stream.class);
 
     Assert.assertEquals(1, testStream.stream.size());
     Assert.assertEquals("Top Charts", testStream.stream.get(0).title);
-    Assert.assertEquals("background-image.png", testStream.stream.get(0).backgroundImage);
     Assert.assertEquals("Top Free", testStream.stream.get(0).charts.get(0).title);
     Assert.assertEquals(5, testStream.stream.get(0).charts.get(0).apps.get(1).rating, 0);
     Assert.assertEquals(3, testStream.stream.get(0).charts.get(1).apps.get(0).id);

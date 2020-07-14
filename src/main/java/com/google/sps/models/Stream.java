@@ -1,14 +1,14 @@
 package com.google.sps.servlets;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Stream {
-    ArrayList<TopChartsCluster> stream = new ArrayList<TopChartsCluster>();
-    ArrayList<StandardCluster> standardClusterStream = new ArrayList<StandardCluster>();
-    
+    List<Cluster> clusters = new ArrayList<Cluster>();
+
     Stream() {
         TopChartsCluster topCharts = new TopChartsCluster();
-        stream.add(topCharts);
+        clusters.add(topCharts);
         StandardCluster standard = new StandardCluster();
-        standardClusterStream.add(standard);
+        clusters.add(standard);
     }
 }

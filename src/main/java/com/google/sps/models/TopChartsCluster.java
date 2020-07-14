@@ -1,12 +1,19 @@
 package com.google.sps.servlets;
 import java.util.ArrayList;
 
-public class TopChartsCluster {
+public class TopChartsCluster implements Cluster {
     String title = "Top Charts";
-    String backgroundImage = "background-image.png";
     ArrayList<Chart> charts = new ArrayList<Chart>();
 
     TopChartsCluster() {
+        makeCluster();
+    }
+
+    public String getType() {
+        return "Top Charts";
+    }
+
+    public void makeCluster(){
         App mockApp1 = new App(1, "mockApp1", "mockIcon1.png", "Fake Apps", 5, " ", 0, " ");
         App mockApp2 = new App(2, "mockApp2", "mockIcon2.png", "Fake Apps", 5, " ", 0, " ");
         App mockApp3 = new App(3, "mockApp3", "mockIcon3.png", "Fake Apps", 5, " ", 0, " ");
