@@ -2,9 +2,9 @@ package com.google.sps.servlets;
 import java.util.ArrayList;
 
 class Card {
-    String title;
-    String bigImageUrl;
-    App apps;
+    private String title;
+    private String bigImageUrl;
+    private App apps;
 
     Card(String title, String bigImageUrl, App apps) {
         this.title = title;
