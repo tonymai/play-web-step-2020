@@ -69,7 +69,7 @@ public final class StreamServletTest {
     Gson gson = new Gson();
     Stream testStream = gson.fromJson(stringWriter.toString(), Stream.class);
 
-    Assert.assertEquals(1, testStream.stream.size());
+    Assert.assertEquals(2, testStream.stream.size());
     Assert.assertEquals("Top Charts", testStream.stream.get(0).title);
     Assert.assertEquals("Top Free", testStream.stream.get(0).charts.get(0).title);
     Assert.assertEquals(5, testStream.stream.get(0).charts.get(0).apps.get(1).rating, 0);

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import TopCharts from './Clusters/TopCharts/TopCharts.js';
-import StandardCluster from './Clusters/StandardCluster/StandardCluster.js';
+import StandardCluster from './Clusters/StandardCluster/standard_cluster.js';
 import RecommendedCategories from './Clusters/RecommendedCategories/RecommendedCategories.js';
 
 class App extends Component {

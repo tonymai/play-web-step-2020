@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, wait }from '@testing-library/react';
-import StandardCluster from './StandardCluster.js';
+import StandardCluster from './standard_cluster.js';
 
 test('correct subtitle', () => {
     const { getByText } = render(<MusicApps />);
