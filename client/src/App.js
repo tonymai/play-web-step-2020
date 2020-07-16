@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import TopCharts from './Clusters/TopCharts/TopCharts.js';
 import StandardCluster from './Clusters/StandardCluster/standard_cluster.js';
-import RecommendedCategories from './Clusters/RecommendedCategories/RecommendedCategories.js';
+import RecommendedCategories from './Clusters/RecommendedCategories/recommended_categories.js';
 import AppOfTheWeek from './Clusters/AppOfTheWeek/AppOfTheWeek.js';
 
 class App extends Component {
