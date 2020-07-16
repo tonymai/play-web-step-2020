@@ -65,17 +65,13 @@ public final class StreamServletTest {
     servlet.doGet(mockRequest, mockResponse);
     verify(mockResponse, atLeast(1)).setContentType("application/json");
 
-    //Convert JSON File to Java Object
+    //Convert Java Object to Json
     Gson gson = new Gson();
-    Stream testStream = gson.fromJson(stringWriter.toString(), Stream.class);
-    
-    TopChartsCluster topCharts = (TopChartsCluster)(testStream.clusters.get(0));
-    StandardCluster standard = (StandardCluster)(testStream.clusters.get(0));
+    Stream stream = new Stream();
+    String actualStream = gson.toJson(stream).trim();
+    //stringWriter adds an extra space
+    String testStream = stringWriter.toString().trim();
 
-    Assert.assertEquals(2, testStream.clusters.size());
-    Assert.assertEquals("Top Charts",topCharts.getTitle());
-    Assert.assertEquals("Top Grossing", topCharts.getCharts().get(1).getTitle());
-    Assert.assertEquals("Standard Cluster", standard.getType());
-    Assert.assertEquals("mockCard1", standard.getCards().get(0).getTitle());
+    Assert.assertEquals(actualStream, testStream);
   }
 }
