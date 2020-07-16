@@ -18,7 +18,7 @@ public class TopChartsCluster implements Cluster {
     }
 
     public String getType() {
-        return "Top Charts";
+        return "TopCharts";
     }
 
     public void makeCluster(){

@@ -53,7 +53,7 @@ public final class StreamServletTest {
 
   @Before
   public void setUp() throws Exception {
-    //Create real StreamServlet object.
+    // Create real StreamServlet object.
     servlet = new StreamServlet();
     stringWriter = new StringWriter();
     PrintWriter writer = new PrintWriter(stringWriter);
@@ -65,11 +65,11 @@ public final class StreamServletTest {
     servlet.doGet(mockRequest, mockResponse);
     verify(mockResponse, atLeast(1)).setContentType("application/json");
 
-    //Convert Java Object to Json
+    // Convert Java Object to Json
     Gson gson = new Gson();
     Stream stream = new Stream();
     String actualStream = gson.toJson(stream).trim();
-    //stringWriter adds an extra space
+    // trimming the string to prevent extra spaces
     String testStream = stringWriter.toString().trim();
 
     Assert.assertEquals(actualStream, testStream);

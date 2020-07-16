@@ -13,7 +13,7 @@ public class StandardCluster implements Cluster {
     }
 
     public String getType() {
-        return "Standard Cluster";
+        return "StandardCluster";
     }
 
     public void makeCluster() {
