@@ -2,11 +2,19 @@ package com.google.sps.servlets;
 import java.util.ArrayList;
 
 public class TopChartsCluster implements Cluster {
-     String title = "Top Charts";
-    ArrayList<Chart> charts = new ArrayList<Chart>();
-//make private and create getter for private var
+    String title = "Top Charts";
+    private ArrayList<Chart> charts = new ArrayList<Chart>();
+
     TopChartsCluster() {
         makeCluster();
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    public ArrayList<Chart> getCharts() {
+        return this.charts;
     }
 
     public String getType() {

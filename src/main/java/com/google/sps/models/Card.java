@@ -11,4 +11,16 @@ class Card {
         this.bigImageUrl = bigImageUrl;
         this.apps = apps;
     }
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    public String getBigImageUrl() {
+        return this.bigImageUrl;
+    }
+
+    public App getApp() {
+        return this.apps;
+    }
 }

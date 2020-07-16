@@ -68,11 +68,14 @@ public final class StreamServletTest {
     //Convert JSON File to Java Object
     Gson gson = new Gson();
     Stream testStream = gson.fromJson(stringWriter.toString(), Stream.class);
+    
+    TopChartsCluster topCharts = (TopChartsCluster)(testStream.clusters.get(0));
+    StandardCluster standard = (StandardCluster)(testStream.clusters.get(0));
 
-    Assert.assertEquals(2, testStream.stream.size());
-    Assert.assertEquals("Top Charts", testStream.stream.get(0).title);
-    Assert.assertEquals("Top Free", testStream.stream.get(0).charts.get(0).title);
-    Assert.assertEquals(5, testStream.stream.get(0).charts.get(0).apps.get(1).rating, 0);
-    Assert.assertEquals(3, testStream.stream.get(0).charts.get(1).apps.get(0).id);
+    Assert.assertEquals(2, testStream.clusters.size());
+    Assert.assertEquals("Top Charts",topCharts.getTitle());
+    Assert.assertEquals("Top Grossing", topCharts.getCharts().get(1).getTitle());
+    Assert.assertEquals("Standard Cluster", standard.getType());
+    Assert.assertEquals("mockCard1", standard.getCards().get(0).getTitle());
   }
 }

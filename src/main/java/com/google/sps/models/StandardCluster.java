@@ -2,11 +2,14 @@ package com.google.sps.servlets;
 import java.util.ArrayList;
 
 public class StandardCluster implements Cluster {
-    ArrayList<Card> cards = new ArrayList<Card>();
-//make var private and make getter
+    private ArrayList<Card> cards = new ArrayList<Card>();
 
     StandardCluster() {
         makeCluster();
+    }
+
+    public ArrayList<Card> getCards() {
+        return this.cards;
     }
 
     public String getType() {

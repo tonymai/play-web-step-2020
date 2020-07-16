@@ -2,6 +2,10 @@ package com.google.sps.servlets;
 import java.util.ArrayList;
 
 public class App {
+        private String id;
+        private String icon, name, category, rated, appDescription;
+        private double rating, price;
+
     public static class Builder {
         private String id;
         private String icon, name, category, rated, appDescription;
