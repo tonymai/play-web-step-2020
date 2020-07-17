@@ -2,7 +2,7 @@ package com.google.sps.servlets;
 import java.util.ArrayList;
 
 public class TopChartsCluster implements Cluster {
-    String title = "Top Charts";
+    private String title = "Top Charts";
     private ArrayList<Chart> charts = new ArrayList<Chart>();
 
     TopChartsCluster() {

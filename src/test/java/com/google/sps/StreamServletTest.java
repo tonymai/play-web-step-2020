@@ -69,7 +69,7 @@ public final class StreamServletTest {
     Gson gson = new Gson();
     Stream stream = new Stream();
     String actualStream = gson.toJson(stream).trim();
-    // trimming the string to prevent extra spaces
+    // Trimming the string to prevent extra spaces
     String testStream = stringWriter.toString().trim();
 
     Assert.assertEquals(actualStream, testStream);
