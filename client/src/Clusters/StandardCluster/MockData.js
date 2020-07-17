@@ -4,7 +4,7 @@ import pandoraIcon from './Images/pandoraIcon.png';
 import spotifyIcon from './Images/spotifyIcon.png';
 import navMusicIcon from './Images/navMusicIcon.png';
 
-export const musicApps = {
+export const cluster = {
     title: "Rock out while you work out",
     cards: [
         {
