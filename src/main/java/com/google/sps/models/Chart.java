@@ -2,7 +2,7 @@ package com.google.sps.models;
 import java.util.ArrayList;
 import java.util.List;
 
-class Chart {
+public class Chart {
     private String title;
     private String subtitle;
     private String chartId;

@@ -4,11 +4,11 @@ import java.util.List;
 import java.io.*;
 
 public class StandardCluster extends Cluster {
-    private String title = "Rock out while you work out";
+    private String title;
     private List<Card> cards = new ArrayList<Card>();
 
-    StandardCluster() {
-        makeCluster();
+    public StandardCluster() {
+        this.title = "Rock out while you work out";
         this.type = getType();
         this.id = getID();
     }
