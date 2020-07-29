@@ -7,8 +7,6 @@ public class Stream {
     private List<Cluster> clusters = new ArrayList<Cluster>();
 
     public Stream() {
-        AppOfTheWeekCluster appOfTheWeek = new AppOfTheWeekCluster();
-        clusters.add(appOfTheWeek);
         StandardCluster standard = new StandardCluster();
         clusters.add(standard);
         TopChartsCluster topCharts = new TopChartsCluster();
