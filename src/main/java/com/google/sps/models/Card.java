@@ -1,12 +1,12 @@
 package com.google.sps.models;
 import java.util.ArrayList;
 
-class Card {
+public class Card {
     private String id;
     private String bigImageUrl;
     private App app;
 
-    Card(String id, String bigImageUrl, App app) {
+    public Card(String id, String bigImageUrl, App app) {
         this.id = id;
         this.bigImageUrl = bigImageUrl;
         this.app = app;

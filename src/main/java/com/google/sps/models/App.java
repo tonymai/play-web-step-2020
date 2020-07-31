@@ -2,9 +2,13 @@ package com.google.sps.models;
 import java.util.ArrayList;
 
 public class App {
-        private String id;
-        private String url, title, category, rated, appDescription, developer, review;
-        private double rating, price;
+    private String id;
+    private String url, title, category, rated, appDescription, developer, review;
+    private double rating, price;
+
+    public String getID() {
+        return this.id;
+    }
 
     public static class Builder {
         private String id;

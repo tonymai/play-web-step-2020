@@ -8,38 +8,38 @@ import java.util.*;
 
 public class ClusterSeeder {
 
-    DatastoreService db = DatastoreServiceFactory.getDataStoreService();
+    DatastoreService db = DatastoreServiceFactory.getDatastoreService();
     
-    AppOfTheWeek appOfTheWeek = new AppOfTheWeek();
     StandardCluster standardCluster = new StandardCluster();
     TopChartsCluster topChartsCluster = new TopChartsCluster();
 
     public void seedDB() {
         setTopChartsEntityProperties(makeTopChartsCluster());
+        setStandardClusterProprties(makeStandardCluster());
     }
 
     public void setTopChartsEntityProperties(TopChartsCluster topChartsCluster) {
-        Entity topChartsEntity = new Entity("Cluster");
+        Entity topChartsEntity = new Entity("Top Charts Cluster");
         topChartsEntity.setProperty("id", topChartsCluster.getID());
         topChartsEntity.setProperty("title", topChartsCluster.getTitle());
         topChartsEntity.setProperty("type", topChartsCluster.getType());
 
         List<Map> topChartsMap = new ArrayList<Map>();
-        List<Map> charts = topChartsCluster.getCharts();
+        List<Chart> charts = topChartsCluster.getCharts();
 
         for(int i = 0; i < charts.size(); i++) {
             Chart c = charts.get(i);
 
             Map tmpMap = new HashMap();
-            tmpMap.set("id", c.getID());
-            tmpMap.set("title", c.getTitle());
+            tmpMap.put("id", c.getID());
+            tmpMap.put("title", c.getTitle());
 
-            List<Map> chartApps = c.get("apps");
+            List<App> chartApps = c.getApps();
             List<String> appIds = new ArrayList<String>();
             for(int j = 0; j < chartApps.size(); j++) {
-                appIds.add(chartApps.get(j).get("id"));
+                appIds.add(chartApps.get(j).getID());
             }
-            tmpMap.set("apps", appIds);
+            tmpMap.put("apps", appIds);
             topChartsMap.add(tmpMap);
         }
 
@@ -48,16 +48,43 @@ public class ClusterSeeder {
         db.put(topChartsEntity);
     }
 
+    public void setStandardClusterProprties(StandardCluster standardCluster) {
+        Entity standardEntity = new Entity("Standard Cluster");
+        standardEntity.setProperty("id", standardCluster.getID());
+        standardEntity.setProperty("title", standardCluster.getTitle());
+        standardEntity.setProperty("type", standardCluster.getType());
+
+        List<Map> standardMap = new ArrayList<Map>();
+        List<Card> cards = standardCluster.getCards();
+
+        for(int i = 0; i < cards.size(); i++) {
+            Card c = cards.get(i);
+
+            Map tmpMap = new HashMap();
+            tmpMap.put("id", c.getId());
+            tmpMap.put("bigImageUrl", c.getBigImageUrl());
+
+            App cardApp = c.getApp();
+
+            tmpMap.put("appID", cardApp.getID());
+            standardMap.add(tmpMap);
+        }
+
+        standardEntity.setProperty("cards", standardMap);
+
+        db.put(standardEntity);
+    }
+
     public TopChartsCluster makeTopChartsCluster() {
 
         TopChartsCluster topChartsCluster = new TopChartsCluster();
 
-        App mockApp1 = new App.Builder("1").setTitle("mockApp1").setIcon("mockIcon1.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
-        App mockApp2 = new App.Builder("2").setTitle("mockApp2").setIcon("mockIcon2.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
-        App mockApp3 = new App.Builder("3").setTitle("mockApp3").setIcon("mockIcon3.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
-        App mockApp4 = new App.Builder("4").setTitle("mockApp4").setIcon("mockIcon4.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
-        App mockApp5 = new App.Builder("5").setTitle("mockApp5").setIcon("mockIcon5.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
-        App mockApp6 = new App.Builder("6").setTitle("mockApp6").setIcon("mockIcon6.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
+        App mockApp1 = new App.Builder("1").setTitle("mockApp1").setUrl("mockIcon1.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
+        App mockApp2 = new App.Builder("2").setTitle("mockApp2").setUrl("mockIcon2.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
+        App mockApp3 = new App.Builder("3").setTitle("mockApp3").setUrl("mockIcon3.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
+        App mockApp4 = new App.Builder("4").setTitle("mockApp4").setUrl("mockIcon4.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
+        App mockApp5 = new App.Builder("5").setTitle("mockApp5").setUrl("mockIcon5.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
+        App mockApp6 = new App.Builder("6").setTitle("mockApp6").setUrl("mockIcon6.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
 
         ArrayList<App> topFree = new ArrayList<App>();
         ArrayList<App> topGrossing = new ArrayList<App>();
@@ -81,5 +108,25 @@ public class ClusterSeeder {
         topPaid.add(mockApp6);
 
         return topChartsCluster;
+    }
+
+    public StandardCluster makeStandardCluster() {
+
+        StandardCluster standardCluster = new StandardCluster();
+
+        App mockApp1 = new App.Builder("1").setTitle("mockApp1").setUrl("/images/emptyAppIcon.jpeg").setCategory("Fake Apps").setRating(5).setPrice(0).setRated("Everyone").setAppDescription("mock app description").build();
+        App mockApp2 = new App.Builder("2").setTitle("mockApp2").setUrl("/images/emptyAppIcon.jpeg").setCategory("Fake Apps").setRating(5).setPrice(0).setRated("Everyone").setAppDescription("mock app description").build();
+        App mockApp3 = new App.Builder("3").setTitle("mockApp3").setUrl("/images/emptyAppIcon.jpeg").setCategory("Fake Apps").setRating(5).setPrice(0.99).setRated("Everyone").setAppDescription("mock app description").build();
+        App mockApp4 = new App.Builder("4").setTitle("mockApp4").setUrl("/images/emptyAppIcon.jpeg").setCategory("Fake Apps").setRating(5).setPrice(0).setRated("Everyone").setAppDescription("mock app description").build();
+        Card mockCard1 = new Card("mockCard1", "/images/emptyAppIcon.jpeg", mockApp1);
+        Card mockCard2 = new Card("mockCard2", "/images/emptyAppIcon.jpeg", mockApp2);
+        Card mockCard3 = new Card("mockCard3", "/images/emptyAppIcon.jpeg", mockApp3);
+        Card mockCard4 = new Card("mockCard4", "/images/emptyAppIcon.jpeg", mockApp4);
+        standardCluster.cards.add(mockCard1);
+        standardCluster.cards.add(mockCard2);
+        standardCluster.cards.add(mockCard3);
+        standardCluster.cards.add(mockCard4);
+
+        return standardCluster;
     }
 }
