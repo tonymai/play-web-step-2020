@@ -29,6 +29,5 @@ public class AppOfTheWeekCluster extends Cluster {
     public void makeCluster() {
         App mockApp = new App.Builder("1").setTitle("mockApp").setUrl("/images/emptyAppIcon.jpeg").setRating(5).setRated("Everyone").setAppDescription("mock app description").setDeveloper("Mock Developer").setReview("11K reviews").build();
         card = new Card("mockCard", "https://mockBigImageUrl.com", mockApp);
-
     }
 }
