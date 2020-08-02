@@ -4,7 +4,7 @@ import java.util.List;
 import java.io.*;
 
 public class StandardCluster extends Cluster {
-    public String title;
+    private String title;
     public List<Card> cards = new ArrayList<Card>();
 
     public StandardCluster() {

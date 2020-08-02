@@ -18,7 +18,7 @@ public class ClusterSeeder {
         setStandardClusterProprties(makeStandardCluster());
     }
 
-    public void setTopChartsEntityProperties(TopChartsCluster topChartsCluster) {
+    private void setTopChartsEntityProperties(TopChartsCluster topChartsCluster) {
         Entity topChartsEntity = new Entity("Top Charts Cluster");
         topChartsEntity.setProperty("id", topChartsCluster.getID());
         topChartsEntity.setProperty("title", topChartsCluster.getTitle());
@@ -48,7 +48,7 @@ public class ClusterSeeder {
         db.put(topChartsEntity);
     }
 
-    public void setStandardClusterProprties(StandardCluster standardCluster) {
+    private void setStandardClusterProprties(StandardCluster standardCluster) {
         Entity standardEntity = new Entity("Standard Cluster");
         standardEntity.setProperty("id", standardCluster.getID());
         standardEntity.setProperty("title", standardCluster.getTitle());
@@ -75,7 +75,7 @@ public class ClusterSeeder {
         db.put(standardEntity);
     }
 
-    public TopChartsCluster makeTopChartsCluster() {
+    private TopChartsCluster makeTopChartsCluster() {
 
         TopChartsCluster topChartsCluster = new TopChartsCluster();
 
@@ -110,7 +110,7 @@ public class ClusterSeeder {
         return topChartsCluster;
     }
 
-    public StandardCluster makeStandardCluster() {
+    private StandardCluster makeStandardCluster() {
 
         StandardCluster standardCluster = new StandardCluster();
 

@@ -15,5 +15,8 @@ public class SeederServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         AppSeeder appsToDB = new AppSeeder();
         appsToDB.seedDB();
+
+        ClusterSeeder clusterToDB = new ClusterSeeder();
+        clusterToDB.seedDB();
     }
 }
