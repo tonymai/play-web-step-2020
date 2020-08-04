@@ -13,14 +13,14 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 5px;
-  margin: 0 1em 0 1em;
+  margin: 0 1em;
 }
 
 .vertical-row {
   display: flex;
   flex-direction: column;
   padding-bottom: 5px;
-  margin: 0 2em 0 2em;
+  margin: 0 2em;
 }
 
 @media screen and (max-width: 1450px) {
@@ -74,6 +74,10 @@
 .section-header h3 {
   color: #575757;
   font-size: 20px;
+}
+
+.col-card {
+    margin: 0 10px;
 }
 
 .img-fluid {
