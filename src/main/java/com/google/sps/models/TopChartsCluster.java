@@ -41,14 +41,18 @@ public class TopChartsCluster extends Cluster {
         App mockApp4 = new App.Builder("4").setTitle("mockApp4").setUrl("/images/emptyAppIcon.jpeg").setCategory("Fake Apps").setRating(5).setPrice(0).build();
         App mockApp5 = new App.Builder("5").setTitle("mockApp5").setUrl("/images/emptyAppIcon.jpeg").setCategory("Fake Apps").setRating(5).setPrice(0).build();
         App mockApp6 = new App.Builder("6").setTitle("mockApp6").setUrl("/images/emptyAppIcon.jpeg").setCategory("Fake Apps").setRating(5).setPrice(0).build();
+        App mockApp7 = new App.Builder("7").setTitle("mockApp7").setUrl("/images/emptyAppIcon.jpeg").setCategory("Fake Apps").setRating(5).setPrice(0).build();
+        App mockApp8 = new App.Builder("8").setTitle("mockApp8").setUrl("/images/emptyAppIcon.jpeg").setCategory("Fake Apps").setRating(5).setPrice(0).build();
 
         ArrayList<App> topFree = new ArrayList<App>();
         ArrayList<App> topGrossing = new ArrayList<App>();
         ArrayList<App> topPaid = new ArrayList<App>();
+        ArrayList<App> trending = new ArrayList<App>();
 
         Chart topFreeColumn = new Chart.Builder("1").setTitle("Top Free").setApps(topFree).build();
         Chart topGrossingColumn = new Chart.Builder("2").setTitle("Top Grossing").setApps(topGrossing).build();
         Chart topPaidColumn = new Chart.Builder("3").setTitle("Top Paid").setApps(topPaid).build();
+        Chart trendingColumn = new Chart.Builder("4").setTitle("Trending").setApps(trending).build();
         topFree.add(mockApp1);
         topFree.add(mockApp2);
 
@@ -58,8 +62,12 @@ public class TopChartsCluster extends Cluster {
         topPaid.add(mockApp5);
         topPaid.add(mockApp6);
 
+        trending.add(mockApp7);
+        trending.add(mockApp8);
+
         charts.add(topFreeColumn);
         charts.add(topGrossingColumn);
         charts.add(topPaidColumn);
+        charts.add(trendingColumn);
     }
 }
