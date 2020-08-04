@@ -27,7 +27,6 @@ class TopCharts extends Component {
           <h1>{data.title}</h1>
           <h3>{data.subtitle}</h3>
         </div>
-        <div className="section-body">
         {data.charts && data.charts.map((chart) => {
             return <div className="col" key={data.id}>
                         <div className="vertical-row">
@@ -36,7 +35,6 @@ class TopCharts extends Component {
                         </div>
                     </div>
         })}
-        </div>
       </div>
     );
   }

@@ -44,10 +44,10 @@ public class TopChartsCluster extends Cluster {
         App mockApp7 = new App.Builder("7").setTitle("mockApp7").setUrl("/images/emptyAppIcon.jpeg").setCategory("Fake Apps").setRating(5).setPrice(0).build();
         App mockApp8 = new App.Builder("8").setTitle("mockApp8").setUrl("/images/emptyAppIcon.jpeg").setCategory("Fake Apps").setRating(5).setPrice(0).build();
 
-        ArrayList<App> topFree = new ArrayList<App>();
-        ArrayList<App> topGrossing = new ArrayList<App>();
-        ArrayList<App> topPaid = new ArrayList<App>();
-        ArrayList<App> trending = new ArrayList<App>();
+        List<App> topFree = new ArrayList<App>();
+        List<App> topGrossing = new ArrayList<App>();
+        List<App> topPaid = new ArrayList<App>();
+        List<App> trending = new ArrayList<App>();
 
         Chart topFreeColumn = new Chart.Builder("1").setTitle("Top Free").setApps(topFree).build();
         Chart topGrossingColumn = new Chart.Builder("2").setTitle("Top Grossing").setApps(topGrossing).build();
