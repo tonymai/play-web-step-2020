@@ -20,7 +20,35 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 5px;
-  margin: 0 3em 0 3em;
+  margin: 0 2em 0 2em;
+}
+
+@media screen and (max-width: 1450px) {
+    .section {
+        width: 100%;
+    }
+    
+    .section-header {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .section {
+        width: 100%;
+    }
+
+    .section-header {
+        margin-left: 100px;
+    }
+
+    .vertical-row {
+        margin: 0;
+    }
+} 
+
+.vertical-row div {
+    margin: 5px;
 }
 
 .vertical-row h3 {
