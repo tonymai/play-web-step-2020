@@ -11,7 +11,7 @@ public class ClusterReader {
     private DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 
     public ArrayList<Entity> getClusters() {
-        ArrayList<Entity> clusters = new ArrayList<Entity>();
+        List<Entity> clusters = new ArrayList<Entity>();
 
         Query query = new Query("Cluster");
         PreparedQuery results = datastore.prepare(query);

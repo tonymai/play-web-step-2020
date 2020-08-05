@@ -44,7 +44,6 @@ public class ClusterSeeder {
         }
 
         topChartsEntity.setProperty("charts", topChartsMap);
-
         db.put(topChartsEntity);
     }
 
@@ -71,7 +70,6 @@ public class ClusterSeeder {
         }
 
         standardEntity.setProperty("cards", standardMap);
-
         db.put(standardEntity);
     }
 
