@@ -1,6 +1,6 @@
 package com.google.sps.service;
 
-import java.util.ArrayList;
+import java.util.*;
 import com.google.appengine.api.datastore.PreparedQuery;
 import com.google.appengine.api.datastore.Query;
 import com.google.appengine.api.datastore.Entity;
@@ -10,7 +10,7 @@ import com.google.appengine.api.datastore.DatastoreServiceFactory;
 public class ClusterReader {
     private DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 
-    public ArrayList<Entity> getClusters() {
+    public List<Entity> getClusters() {
         List<Entity> clusters = new ArrayList<Entity>();
 
         Query query = new Query("Cluster");
