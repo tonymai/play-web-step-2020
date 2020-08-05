@@ -15,7 +15,7 @@
 package com.google.sps.servlets;
 
 import com.google.gson.Gson;
-import com.google.sps.models.Stream;
+import com.google.sps.models.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.servlet.annotation.WebServlet;

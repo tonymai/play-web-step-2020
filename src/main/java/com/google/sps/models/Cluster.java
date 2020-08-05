@@ -6,5 +6,4 @@ abstract class Cluster {
     
     abstract String getType();
     abstract String getID();
-    abstract void makeCluster();
 }

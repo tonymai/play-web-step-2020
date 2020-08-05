@@ -2,7 +2,7 @@ package com.google.sps.models;
 import java.util.ArrayList;
 import java.util.List;
 
-class Chart {
+public class Chart {
     private String title;
     private String subtitle;
     private String chartId;
@@ -15,7 +15,19 @@ class Chart {
         this.apps = apps;
     }
 
-      public static class Builder {
+    public String getID() {
+        return this.chartId;
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
+
+    public List<App> getApps(){
+        return this.apps;
+    }
+
+    public static class Builder {
         private String title;
         private String subtitle;
         private String chartId;
