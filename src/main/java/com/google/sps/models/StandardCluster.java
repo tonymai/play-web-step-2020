@@ -5,10 +5,9 @@ import java.io.*;
 
 public class StandardCluster extends Cluster {
     private String title;
-    public List<Card> cards = new ArrayList<Card>();
+    private List<Card> cards = new ArrayList<Card>();
 
     public StandardCluster() {
-        this.title = "Rock out while you work out";
         this.type = getType();
         this.id = getID();
     }
@@ -27,5 +26,13 @@ public class StandardCluster extends Cluster {
 
     public String getID() {
         return "standardClusterID";
+    }
+
+    public void addCard (Card c) {
+        this.cards.add(c);
+    }
+
+    public void setTitle (String title){
+        this.title = title;
     }
 }

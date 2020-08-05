@@ -19,7 +19,7 @@ public class ClusterSeeder {
     }
 
     private void setTopChartsEntityProperties(TopChartsCluster topChartsCluster) {
-        Entity topChartsEntity = new Entity("Top Charts Cluster");
+        Entity topChartsEntity = new Entity("Clusters");
         topChartsEntity.setProperty("id", topChartsCluster.getID());
         topChartsEntity.setProperty("title", topChartsCluster.getTitle());
         topChartsEntity.setProperty("type", topChartsCluster.getType());
@@ -49,7 +49,7 @@ public class ClusterSeeder {
     }
 
     private void setStandardClusterProprties(StandardCluster standardCluster) {
-        Entity standardEntity = new Entity("Standard Cluster");
+        Entity standardEntity = new Entity("Clusters");
         standardEntity.setProperty("id", standardCluster.getID());
         standardEntity.setProperty("title", standardCluster.getTitle());
         standardEntity.setProperty("type", standardCluster.getType());
@@ -97,13 +97,12 @@ public class ClusterSeeder {
         topChartsCluster.addChart(topFreeColumn);
         topChartsCluster.addChart(topGrossingColumn);
         topChartsCluster.addChart(topPaidColumn);
-
+        topChartsCluster.setTitle("Top Charts");
+        topChartsCluster.setSubtitle("For Wear OS");
         topFree.add(mockApp1);
         topFree.add(mockApp2);
-
         topGrossing.add(mockApp3);
         topGrossing.add(mockApp4);
-
         topPaid.add(mockApp5);
         topPaid.add(mockApp6);
 
@@ -122,10 +121,11 @@ public class ClusterSeeder {
         Card mockCard2 = new Card("mockCard2", "/images/emptyAppIcon.jpeg", mockApp2);
         Card mockCard3 = new Card("mockCard3", "/images/emptyAppIcon.jpeg", mockApp3);
         Card mockCard4 = new Card("mockCard4", "/images/emptyAppIcon.jpeg", mockApp4);
-        standardCluster.cards.add(mockCard1);
-        standardCluster.cards.add(mockCard2);
-        standardCluster.cards.add(mockCard3);
-        standardCluster.cards.add(mockCard4);
+        standardCluster.addCard(mockCard1);
+        standardCluster.addCard(mockCard2);
+        standardCluster.addCard(mockCard3);
+        standardCluster.addCard(mockCard4);
+        standardCluster.setTitle("Rock out while you work out");
 
         return standardCluster;
     }
