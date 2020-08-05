@@ -37,11 +37,7 @@ public class ClusterSeeder {
             List<App> chartApps = c.getApps();
             List<String> appIds = new ArrayList<String>();
             for(int j = 0; j < chartApps.size(); j++) {
-<<<<<<< HEAD
                 appIds.add(chartApps.get(j).getId());
-=======
-                appIds.add(chartApps.get(j).getID());
->>>>>>> 7ac139c18c17e8f333a453b8658ba95b33242818
             }
             tmpMap.put("apps", appIds);
             topChartsMap.add(tmpMap);
