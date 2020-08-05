@@ -11,8 +11,6 @@ public class TopChartsCluster extends Cluster {
     public TopChartsCluster() {
         this.type = getType();
         this.id = getID();
-        this.title = "Top Charts";
-        this.subtitle = "For Wear OS";
     }
 
     public String getTitle() {
@@ -37,5 +35,13 @@ public class TopChartsCluster extends Cluster {
 
     public void addChart(Chart chart) {
         this.charts.add(chart);
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setSubtitle(String subtitle) {
+        this.subtitle = subtitle;
     }
 }

@@ -7,22 +7,19 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 
-public class AppReader {
+public class ClusterReader {
     private DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 
-    public ArrayList<Entity> getApps(ArrayList<String> appIds) {
-        ArrayList<Entity> apps = new ArrayList<Entity>();
+    public ArrayList<Entity> getClusters() {
+        ArrayList<Entity> clusters = new ArrayList<Entity>();
 
-        Query query = new Query("App");
+        Query query = new Query("Cluster");
         PreparedQuery results = datastore.prepare(query);
 
-        for(String id: appIds) {
-            for(Entity entity: results.asIterable()){
-                if(((String)entity.getProperty("id")).equals(id)){
-                    apps.add(entity);
-                }
-            }
+        for (Entity entity : results.asIterable()) {
+            clusters.add(entity);
         }
-        return apps;
+        
+        return clusters;
     }
 }
