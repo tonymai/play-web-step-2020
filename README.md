@@ -2,6 +2,8 @@
 
 ## Objective
 
+test
+
 Create a web app with technologies learned from the [Google STEP training program](https://github.com/googleinterns/step).
 
 ## Idea
